@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from "./features/soundscapes/Slider";
 import PlayButton from "./features/soundscapes/Player/PlayButton";
+import Player from "./features/soundscapes/Player";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Slider color={"#47ff84"} onChange={()=>{}} startValue={50}active={true}/>
       <Slider color={"#47f9ff"} onChange={()=>{}} startValue={60}active={true}/>
       <PlayButton onChange={() => {}}/>
+      <Player/>
     </div>
   );
 }
