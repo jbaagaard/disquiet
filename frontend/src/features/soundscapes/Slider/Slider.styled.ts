@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   position: relative;
 `
 
-export const Slider = styled(SliderNoStyle)<{color:string, value: number}>`
+export const Slider = styled(SliderNoStyle)<{color:string, value: number, active:boolean}>`
   -webkit-appearance: none;
   margin-left: -88px;
   margin-top: 92px;
@@ -16,13 +16,13 @@ export const Slider = styled(SliderNoStyle)<{color:string, value: number}>`
   border-radius: 25px;
   background: #585f88;
   outline: none;
-  opacity: 0.9;
+  opacity: ${props => props.active? "0.9" : "0.3" };
   -webkit-transition: .1s;
   transition: opacity .2s;
   transform: rotate(-90deg);
 
   &:hover {
-    opacity: 1;
+    opacity: ${props => props.active? "1" : "0.5" };
   }
 
   &::-webkit-slider-thumb {

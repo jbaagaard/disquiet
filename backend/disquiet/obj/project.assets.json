@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\disquiet\\disquiet.csproj",
+      "projectUniqueName": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\disquiet.csproj",
       "projectName": "disquiet",
-      "projectPath": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\disquiet\\disquiet.csproj",
+      "projectPath": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\disquiet.csproj",
       "packagesPath": "C:\\Users\\jens\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\disquiet\\obj\\",
+      "outputPath": "C:\\Users\\jens\\Documents\\GitHub\\disquiet\\backend\\disquiet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jens\\AppData\\Roaming\\NuGet\\NuGet.Config"
