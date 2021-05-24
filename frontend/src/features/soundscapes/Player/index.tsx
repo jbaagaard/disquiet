@@ -1,12 +1,12 @@
 import React from "react";
 import * as S from "./Player.styled";
-import Sound from "react-sound"
-
+const rain = require("../../../public/rain.ogg")
 const Player = () => {
     return(
         <S.Wrapper>
-            asasd
-            <Sound playStatus={"PLAYING"} url={"../../testData/rain.ogg"} loop={true} volume={100}/>
+            <audio controls={true}>
+                <source src={rain} type={"audio/ogg"}/>
+            </audio>
         </S.Wrapper>
     )
 };
