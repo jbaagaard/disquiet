@@ -14,8 +14,8 @@ export const Button = styled.div<{ playing: boolean }>`
   transition: 200ms all ease;
   cursor: pointer;
 
-  border-style: ${props => props.playing ? "solid" : "double"};
-  border-width: ${props => props.playing ? "19px 0 19px 30px" : "0 0 0 30px"};
+  border-style: ${props => props.playing ? "double" : "solid"};
+  border-width: ${props => props.playing ? "0 0 0 30px" : "19px 0 19px 30px"};
 
   &:hover {
     opacity: 1;

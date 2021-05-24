@@ -3,19 +3,14 @@ import * as S from "./PlayButton.styled";
 
 
 interface PlayButtonProps {
-    onChange: (playing: boolean) => void
+    onClick: () => void;
+    isPlaying: boolean
 }
-const PlayButton = ({onChange}:PlayButtonProps) => {
-    const [playing, setPlaying] = useState(false)
-
-    function handleClick() {
-        onChange(!playing);
-        setPlaying(!playing)
-    }
+const PlayButton = ({onClick,isPlaying}:PlayButtonProps) => {
 
     return(
         <S.Wrapper>
-            <S.Button playing={playing} onClick={handleClick}>
+            <S.Button playing={isPlaying} onClick={onClick}>
 
             </S.Button>
         </S.Wrapper>
