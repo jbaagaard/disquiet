@@ -12,7 +12,7 @@ export const Sliders = styled.div`
 `
 
 export const Slider = styled.div`
-  margin-right: 16px;
+  margin-right: 12px;
 `
 
 export const PlayButton = styled.div`
