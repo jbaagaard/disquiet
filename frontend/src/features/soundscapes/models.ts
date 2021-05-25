@@ -1,4 +1,7 @@
 export interface SoundscapeDto{
-    title:string;
-    image:any;
+    name:string;
+    url:string;
+    image:string;
+    thumbnail:string;
+    sound_urls:string[];
 }
