@@ -8,4 +8,5 @@ export interface Soundscape {
     image:string;
     thumbnail:string;
     sound_urls:string[];
+    colors:[string,string]
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import * as S from "./Sidebar.styled";
 import {Soundscape} from "../models";
 
@@ -9,12 +9,20 @@ interface SidebarProps {
 }
 
 const Sidebar = ({soundscapes, onChange, value}: SidebarProps) => {
+    const [open, setOpen] = useState(false);
     function handleSoundscapeClick(value: string) {
         onChange(value);
     }
 
+    function handleSidebarButtonClick() {
+        setOpen(!open)
+    }
+
     return (
-        <S.Wrapper>
+        <S.Wrapper open={open}>
+            <S.SidebarButton onClick={handleSidebarButtonClick}>
+                {open? ">" : "<"}
+            </S.SidebarButton>
             {soundscapes.map(s =>
                 <SoundscapeButton
                     soundscape={s}
@@ -37,11 +45,13 @@ const SoundscapeButton = ({soundscape, onClick, active}: SoundscapeButtonProps) 
     }
 
     return (
-        <S.ScButton onClick={handleClick} active={active}>
-            <S.ScImg src={soundscape.thumbnail}/>
-            <S.ScText>{soundscape.name}</S.ScText>
-            {active && " active"}
-        </S.ScButton>
+        <S.ScButtonWrapper active={active} colors={soundscape.colors}>
+            <S.ScButton onClick={handleClick}>
+                <S.ScImg src={soundscape.thumbnail}/>
+                <S.ScText>{soundscape.name}</S.ScText>
+                {active && " active"}
+            </S.ScButton>
+        </S.ScButtonWrapper>
     )
 }
 

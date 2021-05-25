@@ -13,6 +13,9 @@ export const Sliders = styled.div`
 
 export const Slider = styled.div`
   margin-right: 12px;
+  :last-child{
+    margin-right: 0;
+  }
 `
 
 export const PlayButton = styled.div`
