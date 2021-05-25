@@ -6,9 +6,10 @@ import PlayButton from "./PlayButton";
 
 interface PlayerProps {
     url: string;
+    color?:string
 }
 
-const Player = ({url}: PlayerProps) => {
+const Player = ({url,color}: PlayerProps) => {
     const [volume, setVolume] = useState(0.5);
     const [play, {isPlaying, pause}] = useSound(url, {volume, loop: true});
 
@@ -24,8 +25,8 @@ const Player = ({url}: PlayerProps) => {
 
     return (
         <S.Wrapper>
-            <Slider color={"#4750ff"} onChange={handleChange} value={volume} active={true}/>
-            <PlayButton onClick={handlePlayButtonClick} isPlaying={isPlaying}/>
+            <Slider color={color? color : "#4750ff"} onChange={handleChange} value={volume} active={true}/>
+            {/*<PlayButton onClick={handlePlayButtonClick} isPlaying={isPlaying}/>*/}
         </S.Wrapper>
     )
 };

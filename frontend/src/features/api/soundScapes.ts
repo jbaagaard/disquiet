@@ -1,12 +1,19 @@
-import {SoundscapeDto} from "../soundscapes/models";
+import {Soundscape} from "../soundscapes/models";
 
-export async function getSoundscapes():Promise<SoundscapeDto[]>{
-    const rain:SoundscapeDto = {
+export async function getSoundscapes():Promise<Soundscape[]>{
+    const rain:Soundscape = {
         name:"Forrest rain",
         url:"forrest_rain",
         image:"https://i.imgur.com/SVNb0yt.jpg",
         thumbnail:"https://i.imgur.com/d8KaAmn.png",
+        sound_urls:["rain.ogg","rain.ogg","rain.ogg","rain.ogg","rain.ogg","rain.ogg","rain.ogg"]
+    }
+    const rain2:Soundscape = {
+        name:"Forrest rain 2",
+        url:"forrest_rain2",
+        image:"https://i.imgur.com/SVNb0yt.jpg",
+        thumbnail:"https://i.imgur.com/d8KaAmn.png",
         sound_urls:["rain.ogg","rain.ogg"]
     }
-    return [rain];
+    return [rain,rain2];
 }
