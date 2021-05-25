@@ -10,6 +10,7 @@ interface SidebarProps {
 
 const Sidebar = ({soundscapes, onChange, value}: SidebarProps) => {
     const [open, setOpen] = useState(false);
+
     function handleSoundscapeClick(value: string) {
         onChange(value);
     }
@@ -21,13 +22,13 @@ const Sidebar = ({soundscapes, onChange, value}: SidebarProps) => {
     return (
         <S.Wrapper open={open}>
             <S.SidebarButton onClick={handleSidebarButtonClick}>
-                {open? ">" : "<"}
+                {open ? ">" : "<"}
             </S.SidebarButton>
             {soundscapes.map(s =>
-                <SoundscapeButton
-                    soundscape={s}
-                    onClick={handleSoundscapeClick}
-                    active={s.url === value}/>
+                <SoundscapeButton key={s.url}
+                                  soundscape={s}
+                                  onClick={handleSoundscapeClick}
+                                  active={s.url === value}/>
             )}
         </S.Wrapper>
     )

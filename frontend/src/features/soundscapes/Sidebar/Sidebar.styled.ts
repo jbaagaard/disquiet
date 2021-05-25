@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div<{open:boolean}>`
+export const Wrapper = styled.div<{ open: boolean }>`
   width: 160px;
-  margin-left: ${props => props.open? "-160px":"0"};
+  margin-left: ${props => props.open ? "-160px" : "0"};
   flex-direction: column;
   background-color: #050910;
   height: 100vh;
   justify-content: center;
   transition: margin-left 200ms;
   position: relative;
+  z-index: 1;
 `
 
 export const SidebarButton = styled.div`
   display: block;
   position: absolute;
-  top:32px;
+  top: 32px;
   right: 0;
   margin-right: -28px;
   width: 28px;
@@ -29,7 +30,7 @@ export const SidebarButton = styled.div`
   cursor: pointer;
 `
 
-export const ScButtonWrapper = styled.div<{active:boolean, colors:[string,string]}>`
+export const ScButtonWrapper = styled.div<{ active: boolean, colors: [string, string] }>`
   padding: 2px;
   height: 132px;
   width: 132px;
@@ -59,7 +60,7 @@ export const ScText = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   display: block;
 `
