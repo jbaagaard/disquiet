@@ -16,7 +16,6 @@ const Player = ({url,color,name}: PlayerProps) => {
 
     function handleChange(value: number) {
         setVolume(value);
-        console.log(volume);
     }
 
     function handlePlayButtonClick() {

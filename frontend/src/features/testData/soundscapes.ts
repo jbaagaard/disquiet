@@ -60,25 +60,22 @@ export const testRain2: Soundscape = {
         {
             url:"",
             name:"rain-trebble",
-            color:"#2e8de0",
+            color:"#2b89db",
         },
         {
             url:"",
             name:"forrest-bass",
-            color:"#247222",
         },
         {
             url:"",
             name:"forrest-mids",
-            color:"#21a01e",
         },
         {
             url:"",
             name:"forrest-trebble",
-            color:"#19ba15",
         },
 
     ],
-    colors: ["#279270", "#233dd7"]
+    colors: ["#19ba15", "#247222"]
 
 }

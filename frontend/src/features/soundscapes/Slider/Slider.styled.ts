@@ -1,10 +1,22 @@
 import styled from "styled-components";
 import {SliderNoStyle} from "../../../style";
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   width: 24px;
   height: 200px;
   position: relative;
+  color: white;
+`
+
+export const InfoDiv = styled.div<{focus:boolean}>`
+  transition: opacity 800ms;
+  opacity: ${props => props.focus? 0.6 : -10};
+  position: absolute;
+  top: -32px;
+  left: -88px;
+  width: 200px;
+  text-align: center;
+  display: block;
 `
 
 export const Slider = styled(SliderNoStyle)<{color:string, value: number, active:boolean}>`
