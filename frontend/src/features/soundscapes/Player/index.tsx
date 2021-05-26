@@ -1,31 +1,38 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import * as S from "./Player.styled";
 import useSound from "use-sound";
 import Slider from "../Slider";
-import PlayButton from "./PlayButton";
 import {Sound} from "../models";
+import rain from "../../testData/rain.ogg"
 
 interface PlayerProps extends Sound{
+    playing:boolean
 
 }
 
-const Player = ({url,name,color,startVolume}: PlayerProps) => {
+const Player = ({url,name,color,startVolume, playing}: PlayerProps) => {
     const [volume, setVolume] = useState(startVolume? startVolume : 0.5);
-    const [play, {isPlaying, pause}] = useSound(url, {volume, loop: true});
+    const [play, {pause}] = useSound(rain, {volume, loop: true});
+
+
+
+    useEffect(()=>{
+        console.log({playing})
+        if(!playing)
+            pause();
+        else
+            play();
+    },[playing])
+
     console.log(startVolume)
     function handleChange(value: number) {
         setVolume(value);
     }
 
-    function handlePlayButtonClick() {
-        if (isPlaying) pause();
-        else play();
-    }
 
     return (
         <S.Wrapper>
             <Slider color={color? color : "#4750ff"} onChange={handleChange} value={volume} active={true} name={name}/>
-            {/*<PlayButton onClick={handlePlayButtonClick} isPlaying={isPlaying}/>*/}
         </S.Wrapper>
     )
 };

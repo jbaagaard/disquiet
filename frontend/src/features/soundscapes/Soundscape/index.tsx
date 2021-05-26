@@ -13,6 +13,7 @@ interface SoundscapeProps {
 const SoundscapeComponent = ({soundscape}: SoundscapeProps) => {
     const [playing, setPlaying] = useState(false)
 
+
     function handlePlayPauseClick() {
         setPlaying(!playing)
     }
@@ -25,11 +26,8 @@ const SoundscapeComponent = ({soundscape}: SoundscapeProps) => {
             <S.Sliders>
                 {soundscape.sounds.map((s, i) =>
                     <S.Slider key={s.url + i}>
-                        <Player url={s.url} name={s.name} startVolume={s.startVolume ? s.startVolume : 0.5}
-                                color={s.color ?
-                                    s.color
-                                    :
-                                    calculateColor(i, soundscape.sounds.length, soundscape.colors[0], soundscape.colors[1])
+                        <Player url={s.url} name={s.name} startVolume={s.startVolume ? s.startVolume : 0.5} playing={playing}
+                                color={s.color || calculateColor(i, soundscape.sounds.length, soundscape.colors[0], soundscape.colors[1])
                                 }/>
                     </S.Slider>
                 )}
