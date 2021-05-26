@@ -3,6 +3,7 @@ import * as S from "./Slider.styled";
 
 interface SliderProps {
     color: string;
+    name:string
     onChange: (value: number) => void;
     active:boolean;
     value:number;

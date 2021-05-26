@@ -7,6 +7,12 @@ export interface Soundscape {
     name: string;
     image: string;
     thumbnail: string;
-    sound_urls: string[];
+    sounds: Sound[];
     colors: [string, string]
+}
+
+export interface Sound {
+    url:string,
+    name:string,
+    color?:string
 }

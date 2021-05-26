@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {SliderNoStyle} from "../../../style";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div `
   width: 24px;
   height: 200px;
   position: relative;

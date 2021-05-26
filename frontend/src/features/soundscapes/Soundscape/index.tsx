@@ -23,10 +23,14 @@ const SoundscapeComponent = ({soundscape}: SoundscapeProps) => {
                 {soundscape.name}
             </S.Title>
             <S.Sliders>
-                {soundscape.sound_urls.map((s, i) =>
-                    <S.Slider key={s + i}>
-                        <Player url={s}
-                                color={calculateColor(i, soundscape.sound_urls.length, soundscape.colors[0], soundscape.colors[1])}/>
+                {soundscape.sounds.map((s, i) =>
+                    <S.Slider key={s.url + i}>
+                        <Player url={s.url} name={s.name}
+                                color={s.color ?
+                                    s.color
+                                    :
+                                    calculateColor(i, soundscape.sounds.length, soundscape.colors[0], soundscape.colors[1])
+                                }/>
                     </S.Slider>
                 )}
             </S.Sliders>
