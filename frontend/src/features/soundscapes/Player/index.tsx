@@ -3,17 +3,16 @@ import * as S from "./Player.styled";
 import useSound from "use-sound";
 import Slider from "../Slider";
 import PlayButton from "./PlayButton";
+import {Sound} from "../models";
 
-interface PlayerProps {
-    url: string;
-    name:string;
-    color?:string;
+interface PlayerProps extends Sound{
+
 }
 
-const Player = ({url,color,name}: PlayerProps) => {
-    const [volume, setVolume] = useState(0.5);
+const Player = ({url,name,color,startVolume}: PlayerProps) => {
+    const [volume, setVolume] = useState(startVolume? startVolume : 0.5);
     const [play, {isPlaying, pause}] = useSound(url, {volume, loop: true});
-
+    console.log(startVolume)
     function handleChange(value: number) {
         setVolume(value);
     }

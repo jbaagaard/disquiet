@@ -25,7 +25,7 @@ const SoundscapeComponent = ({soundscape}: SoundscapeProps) => {
             <S.Sliders>
                 {soundscape.sounds.map((s, i) =>
                     <S.Slider key={s.url + i}>
-                        <Player url={s.url} name={s.name}
+                        <Player url={s.url} name={s.name} startVolume={s.startVolume ? s.startVolume : 0.5}
                                 color={s.color ?
                                     s.color
                                     :

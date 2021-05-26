@@ -3,7 +3,6 @@ import {Soundscape} from "../soundscapes/models";
 export const testRain: Soundscape = {
     name: "Porch rain",
     url: "forrest_rain",
-    image: "https://i.imgur.com/RR5pUwx.png",
     thumbnail: "https://i.imgur.com/UqF6BqY.png",
     sounds: [
         {
@@ -44,9 +43,14 @@ export const testRain: Soundscape = {
 export const testRain2: Soundscape = {
     name: "Forrest",
     url: "forrest",
-    image: "https://i.imgur.com/SVNb0yt.jpg",
     thumbnail: "https://i.imgur.com/d8KaAmn.png",
     sounds: [
+        {
+            url:"",
+            name:"thunder",
+            color:"#b7a137",
+            startVolume:0
+        },
         {
             url:"",
             name:"rain-bass",
