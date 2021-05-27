@@ -12,7 +12,6 @@ interface SliderProps {
 const Slider = ({onChange, color, active, value, name}: SliderProps) => {
     const [focus,setFocus] = useState(false)
 
-
     function handleChange(event: any) {
         onChange(event.currentTarget.value);
     }
