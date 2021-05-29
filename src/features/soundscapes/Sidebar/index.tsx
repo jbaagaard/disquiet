@@ -9,7 +9,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ soundscapes, onChange, value }: SidebarProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   function handleSoundscapeClick(value: string) {
     onChange(value);

@@ -24,8 +24,9 @@ export const Slider = styled(SliderNoStyle)<{
   active: boolean;
 }>`
   -webkit-appearance: none;
-  margin-left: -88px;
-  margin-top: 92px;
+  position: absolute;
+  left: -88px;
+  top: 92px;
   min-width: 200px;
   height: 16px;
   border-radius: 25px;
