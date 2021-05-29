@@ -12,6 +12,7 @@ body {
   background-color: #080e1c;
   color: white;
   overflow: hidden;
+  height: 100%;
 }
 
 body * {
@@ -23,6 +24,8 @@ div {
   display: flex;
 }
 
-.App {
+.App,
+#root {
   width: 100%;
+  height: 100%;
 }

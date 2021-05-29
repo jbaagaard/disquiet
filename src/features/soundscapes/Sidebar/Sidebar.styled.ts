@@ -5,7 +5,7 @@ export const Wrapper = styled.div<{ open: boolean }>`
   margin-left: ${(props) => (props.open ? "-160px" : "0")};
   flex-direction: column;
   background-color: #050910;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   transition: margin-left 200ms;
   position: relative;
