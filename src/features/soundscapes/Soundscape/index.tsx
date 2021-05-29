@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./Soundscape.styled";
 import { Soundscape } from "../models";
 import Player from "../Player";
@@ -17,7 +17,7 @@ const SoundscapeComponent = ({ soundscape }: SoundscapeProps) => {
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper key={soundscape.name}>
       <S.Title>{soundscape.name}</S.Title>
       <S.Sliders>
         {soundscape.sounds.map((s, i) => (

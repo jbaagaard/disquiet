@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "",
+  "short_name": "disquiet",
+  "name": "disquiet - a simple soundscape website",
   "icons": [],
   "start_url": ".",
   "display": "standalone",

@@ -16,6 +16,10 @@ const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
   useEffect(() => {
     if (!playing) pause();
     else play();
+
+    return () => {
+      pause();
+    };
   }, [playing, pause, play]);
 
   function handleChange(value: number) {
