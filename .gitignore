@@ -1,4 +1,4 @@
-*/obj/*
-*/node_modules/*
-*/.idea/*
-frontend/yarn-error.log
+node_modules
+.idea
+build
+yarn-error.log
