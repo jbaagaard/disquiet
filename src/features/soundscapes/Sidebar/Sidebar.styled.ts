@@ -6,7 +6,6 @@ export const Wrapper = styled.div<{ open: boolean }>`
   flex-direction: column;
   background-color: #050910;
   height: 100%;
-  overflow: auto;
   justify-content: center;
   transition: margin-left 200ms;
   position: relative;
