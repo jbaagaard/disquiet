@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as S from "./Soundscape.styled";
 import { Soundscape } from "../models";
 import Player from "../Player";
