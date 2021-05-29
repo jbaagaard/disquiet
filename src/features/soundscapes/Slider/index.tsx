@@ -33,16 +33,20 @@ export const Slider = ({
   return (
     <S.Wrapper onMouseOver={handleFocus} onMouseLeave={handleBlur}>
       <S.InfoDiv focus={focus}>{name}</S.InfoDiv>
-      <S.Slider
-        type={"range"}
-        min={0}
-        max={1}
-        step={0.01}
-        value={String(value)}
-        onChange={handleChange}
-        color={color}
-        active={active && value !== 0}
-      />
+      <form>
+        <S.Label htmlFor={name}>{name}</S.Label>
+        <S.Slider
+          id={name}
+          type={"range"}
+          min={0}
+          max={1}
+          step={0.01}
+          value={String(value)}
+          onChange={handleChange}
+          color={color}
+          active={active && value !== 0}
+        />
+      </form>
     </S.Wrapper>
   );
 };

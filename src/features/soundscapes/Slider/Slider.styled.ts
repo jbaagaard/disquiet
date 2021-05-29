@@ -19,6 +19,10 @@ export const InfoDiv = styled.div<{ focus: boolean }>`
   display: block;
 `;
 
+export const Label = styled.label`
+  opacity: 0;
+`;
+
 export const Slider = styled(SliderNoStyle)<{
   color: string;
   active: boolean;
