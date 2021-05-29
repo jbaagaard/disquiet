@@ -54,7 +54,10 @@ const SoundscapeButton = ({
   return (
     <S.ScButtonWrapper active={active} colors={soundscape.colors}>
       <S.ScButton onClick={handleClick}>
-        <S.ScImg src={soundscape.thumbnail} />
+        <S.ScImg
+          src={soundscape.thumbnail.url}
+          alt={soundscape.thumbnail.alt}
+        />
         <S.ScText>{soundscape.name}</S.ScText>
         {active && " active"}
       </S.ScButton>

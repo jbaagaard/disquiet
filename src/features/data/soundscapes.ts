@@ -1,9 +1,11 @@
 import { Soundscape } from "../soundscapes/models";
+import rain from "./rain.png";
+import forest from "./forest.png";
 
 export const testRain: Soundscape = {
   name: "Porch rain",
   url: "forrest_rain",
-  thumbnail: "https://i.imgur.com/UqF6BqY.png",
+  thumbnail: { url: rain, alt: "rainy window" },
   sounds: [
     {
       url: "sub_rain.ogg",
@@ -52,7 +54,7 @@ export const testRain: Soundscape = {
 export const testRain2: Soundscape = {
   name: "Forest",
   url: "forest",
-  thumbnail: "https://i.imgur.com/d8KaAmn.png",
+  thumbnail: { url: forest, alt: "forest" },
   sounds: [
     {
       url: "",

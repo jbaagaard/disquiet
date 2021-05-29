@@ -5,7 +5,7 @@ export interface SounscapeDto {
 export interface Soundscape {
   url: string;
   name: string;
-  thumbnail: string;
+  thumbnail: Image;
   sounds: Sound[];
   colors: [string, string];
 }
@@ -15,4 +15,9 @@ export interface Sound {
   name: string;
   color?: string;
   startVolume?: number;
+}
+
+export interface Image {
+  url: string;
+  alt: string;
 }
