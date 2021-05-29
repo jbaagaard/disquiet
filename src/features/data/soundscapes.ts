@@ -50,8 +50,8 @@ export const testRain: Soundscape = {
 };
 
 export const testRain2: Soundscape = {
-  name: "Forrest",
-  url: "forrest",
+  name: "Forest",
+  url: "forest",
   thumbnail: "https://i.imgur.com/d8KaAmn.png",
   sounds: [
     {

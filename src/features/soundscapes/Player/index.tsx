@@ -3,7 +3,7 @@ import * as S from "./Player.styled";
 import useSound from "use-sound";
 import { Slider } from "../Slider";
 import { Sound } from "../models";
-import rain from "../../testData/rain.ogg";
+import rain from "../../data/rain.ogg";
 
 interface PlayerProps extends Sound {
   playing: boolean;
