@@ -21,7 +21,6 @@ export const InfoDiv = styled.div<{ focus: boolean }>`
 
 export const Slider = styled(SliderNoStyle)<{
   color: string;
-  value: number;
   active: boolean;
 }>`
   -webkit-appearance: none;

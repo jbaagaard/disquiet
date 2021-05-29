@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import * as S from "./Slider.styled";
 
 interface SliderProps {
@@ -9,11 +9,17 @@ interface SliderProps {
   value: number;
 }
 
-const Slider = ({ onChange, color, active, value, name }: SliderProps) => {
+export const Slider = ({
+  onChange,
+  color,
+  active,
+  value,
+  name,
+}: SliderProps) => {
   const [focus, setFocus] = useState(false);
 
-  function handleChange(event: any) {
-    onChange(event.currentTarget.value);
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    onChange(Number(event.currentTarget.value));
   }
 
   function handleFocus() {
@@ -32,13 +38,11 @@ const Slider = ({ onChange, color, active, value, name }: SliderProps) => {
         min={0}
         max={1}
         step={0.01}
-        value={value}
+        value={String(value)}
         onChange={handleChange}
         color={color}
-        active={active && value != 0}
+        active={active && value !== 0}
       />
     </S.Wrapper>
   );
 };
-
-export default Slider;

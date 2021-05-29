@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./Player.styled";
 import useSound from "use-sound";
-import Slider from "../Slider";
+import { Slider } from "../Slider";
 import { Sound } from "../models";
 import rain from "../../testData/rain.ogg";
 
@@ -16,7 +16,7 @@ const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
   useEffect(() => {
     if (!playing) pause();
     else play();
-  }, [playing]);
+  }, [playing, pause, play]);
 
   function handleChange(value: number) {
     setVolume(value);
