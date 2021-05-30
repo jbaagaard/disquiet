@@ -10,26 +10,28 @@ interface SoundscapeProps {
 }
 
 const SoundscapeComponent = ({ soundscape }: SoundscapeProps) => {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState<boolean>(false);
 
   useEffect(() => {
-    window.addEventListener("keyup", (event) => {
-      if (event.code === "Space") {
-        handlePlayPauseClick();
-      }
-    });
+    console.log({ playing });
+  }, [playing]);
+
+  const handleKeyDown = (event: any) => {
+    if (event.keyCode === 32) handlePlayPauseClick();
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener("keyup", (event) => {
-        if (event.code === "Space") {
-          handlePlayPauseClick();
-        }
-      });
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   function handlePlayPauseClick() {
-    setPlaying(!playing);
+    console.log("switch");
+    if (playing) setPlaying(false);
+    else setPlaying(true);
   }
 
   return (
