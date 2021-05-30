@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./Soundscape.styled";
 import { Soundscape } from "../models";
 import Player from "../Player";
@@ -11,6 +11,22 @@ interface SoundscapeProps {
 
 const SoundscapeComponent = ({ soundscape }: SoundscapeProps) => {
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("keyup", (event) => {
+      if (event.code === "Space") {
+        handlePlayPauseClick();
+      }
+    });
+
+    return () => {
+      window.removeEventListener("keyup", (event) => {
+        if (event.code === "Space") {
+          handlePlayPauseClick();
+        }
+      });
+    };
+  }, []);
 
   function handlePlayPauseClick() {
     setPlaying(!playing);
