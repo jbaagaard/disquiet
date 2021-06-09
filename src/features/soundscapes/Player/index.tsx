@@ -4,14 +4,22 @@ import useSound from "use-sound";
 import { Slider } from "../Slider";
 import { Sound } from "../models";
 import rain from "../../data/rain.ogg";
+import PlayButton from "./PlayButton";
 
 interface PlayerProps extends Sound {
   playing: boolean;
+  controls?: boolean;
 }
 
-const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
+const Player = ({
+  name,
+  color,
+  startVolume,
+  playing,
+  controls = false,
+}: PlayerProps) => {
   const [volume, setVolume] = useState(startVolume ? startVolume : 0.5);
-  const [play, { pause }] = useSound(rain, { volume, loop: true });
+  const [play, { isPlaying, pause }] = useSound(rain, { volume, loop: true });
 
   useEffect(() => {
     if (!playing) pause();
@@ -26,6 +34,11 @@ const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
     setVolume(value);
   }
 
+  function handlePlayButtonClick() {
+    if (isPlaying) pause();
+    else play();
+  }
+
   return (
     <S.Wrapper>
       <Slider
@@ -35,6 +48,9 @@ const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
         active={true}
         name={name}
       />
+      {controls && (
+        <PlayButton onClick={handlePlayButtonClick} isPlaying={isPlaying} />
+      )}
     </S.Wrapper>
   );
 };
