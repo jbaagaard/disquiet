@@ -8,10 +8,16 @@ interface PlayerProps extends Sound {
   playing: boolean;
 }
 
-const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
-  const [volume, setVolume] = useState(startVolume ? startVolume : 0.5);
-  const [play, { pause }] = useSound("", { volume, loop: true });
-
+const Player = ({
+  name,
+  color,
+  startVolume = 0.5,
+  playing,
+  url,
+}: PlayerProps) => {
+  const [volume, setVolume] = useState(startVolume);
+  const [play, { pause }] = useSound(url, { volume, loop: true });
+  console.log(url);
   useEffect(() => {
     if (!playing) pause();
     else play();
