@@ -18,7 +18,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ height: "100%", display: "flex" }}>
       <Sidebar
         soundscapes={soundscapes}
         onChange={(value) => {

@@ -10,10 +10,7 @@ interface PlayerProps extends Sound {
 
 const Player = ({ name, color, startVolume, playing }: PlayerProps) => {
   const [volume, setVolume] = useState(startVolume ? startVolume : 0.5);
-  const [play, { pause }] = useSound(
-    "https://www.kozco.com/tech/organfinale.wav",
-    { volume, loop: true }
-  );
+  const [play, { pause }] = useSound("", { volume, loop: true });
 
   useEffect(() => {
     if (!playing) pause();

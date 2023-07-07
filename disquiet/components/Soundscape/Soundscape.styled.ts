@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -24,6 +25,7 @@ export const Title = styled.h1`
 
 export const Sliders = styled.div`
   margin: 0 auto;
+  display: flex;
 `;
 
 export const Slider = styled.div`
