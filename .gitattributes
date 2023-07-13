@@ -1,0 +1,4 @@
+public/data/forest.png filter=lfs diff=lfs merge=lfs -text
+public/data/rain.ogg filter=lfs diff=lfs merge=lfs -text
+public/data/rain.png filter=lfs diff=lfs merge=lfs -text
+public/data/soundscapes.ts filter=lfs diff=lfs merge=lfs -text

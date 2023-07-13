@@ -1,0 +1,4 @@
+cicada.wav filter=lfs diff=lfs merge=lfs -text
+hi-water.wav filter=lfs diff=lfs merge=lfs -text
+low-water.wav filter=lfs diff=lfs merge=lfs -text
+running-water.wav filter=lfs diff=lfs merge=lfs -text
