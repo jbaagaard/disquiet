@@ -1,4 +1,4 @@
-import { testRain, testRain2 } from "@/public/data/soundscapes";
+import { testRain, testRain2 } from "@/components/soundscapes";
 import { Soundscape } from "../Soundscape/types";
 
 export async function getSoundscapes(): Promise<Soundscape[]> {
