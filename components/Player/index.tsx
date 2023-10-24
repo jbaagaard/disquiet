@@ -3,21 +3,18 @@ import * as S from "./Player.styled";
 import useSound from "use-sound";
 import { Slider } from "../Slider";
 import { Sound } from "../Soundscape/types";
+import { soundScapeContext } from "../soundScapeContext";
 
 interface PlayerProps extends Sound {
   playing: boolean;
 }
 
-const Player = ({
-  name,
-  color,
-  startVolume = 0.5,
-  playing,
-  url,
-}: PlayerProps) => {
+const Player = ({ name, color, startVolume = 0.5, url }: PlayerProps) => {
   const [volume, setVolume] = useState(startVolume);
+  const { playing } = React.useContext(soundScapeContext);
+
   const [play, { pause }] = useSound(url, { volume, loop: true });
-  console.log(url);
+
   useEffect(() => {
     if (!playing) pause();
     else play();

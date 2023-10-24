@@ -3,6 +3,7 @@ import Sidebar from "@/components/Sidebar";
 import SoundscapeComponent from "@/components/Soundscape";
 import { Soundscape } from "@/components/Soundscape/types";
 import { getSoundscapes } from "@/components/api/soundScapes";
+import { SoundScapeProvider } from "@/components/soundScapeContext";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -26,11 +27,13 @@ const Index = () => {
         }}
         value={activeSoundscape}
       />
-      {activeSoundscape && (
-        <SoundscapeComponent
-          soundscape={soundscapes.find((s) => s.url === activeSoundscape)!}
-        />
-      )}
+      <SoundScapeProvider>
+        {activeSoundscape && (
+          <SoundscapeComponent
+            soundscape={soundscapes.find((s) => s.url === activeSoundscape)!}
+          />
+        )}
+      </SoundScapeProvider>
     </div>
   );
 };

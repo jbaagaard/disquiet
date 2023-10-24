@@ -4,14 +4,14 @@ import { Soundscape } from "./types";
 import Player from "../Player";
 import PlayButton from "../Player/PlayButton";
 import { calculateColor } from "../color/color";
+import { soundScapeContext } from "../soundScapeContext";
 
 interface SoundscapeProps {
   soundscape: Soundscape;
 }
 
 const SoundscapeComponent = ({ soundscape }: SoundscapeProps) => {
-  const [playing, setPlaying] = useState(false);
-
+  const { playing, setPlaying } = React.useContext(soundScapeContext);
   function handlePlayPauseClick() {
     setPlaying(!playing);
   }
