@@ -1,8 +1,9 @@
 import { createContext, useState } from "react";
 
 export interface soundscapeContextProps {
+  noGestures: boolean;
   playing: boolean;
-  setPlaying: (playing: boolean) => void;
+  setPlaying: (value: boolean) => void;
 }
 
 export const soundScapeContext = createContext<soundscapeContextProps>(null!);
@@ -13,11 +14,16 @@ export interface soundScapeProviderProps {
 
 export const SoundScapeProvider = ({ children }: soundScapeProviderProps) => {
   const [playing, setPlaying] = useState(false);
+  const [noGestures, setNoGestures] = useState(true);
   return (
     <soundScapeContext.Provider
       value={{
+        noGestures,
         playing,
-        setPlaying,
+        setPlaying: (value: boolean) => {
+          setPlaying(value);
+          setNoGestures(false);
+        },
       }}
     >
       {children}

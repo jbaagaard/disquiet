@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as S from "./Player.styled";
 import useSound from "use-sound";
 import { Slider } from "../Slider";
@@ -11,18 +11,24 @@ interface PlayerProps extends Sound {
 
 const Player = ({ name, color, startVolume = 0.5, url }: PlayerProps) => {
   const [volume, setVolume] = useState(startVolume);
-  const { playing } = React.useContext(soundScapeContext);
+  const { playing, noGestures } = useContext(soundScapeContext);
 
   const [play, { pause }] = useSound(url, { volume, loop: true });
 
   useEffect(() => {
-    if (!playing) pause();
-    else play();
+    if (noGestures) return;
+
+    if (!playing) {
+      pause();
+    } else {
+      play();
+    }
 
     return () => {
+      console.log("unmounting");
       pause();
     };
-  }, [playing, pause, play]);
+  }, [playing]);
 
   function handleChange(value: number) {
     setVolume(value);
