@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+html,
+body,
+#__next {
+  height: 100%;
+  background-color: #1d2021;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: color, background-color 0.5s;
+  font-family: Roboto Mono, sans-serif;
+}
