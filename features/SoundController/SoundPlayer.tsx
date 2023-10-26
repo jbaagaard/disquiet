@@ -16,7 +16,7 @@ export const SoundPlayer = forwardRef(function SoundPlayer(
   ref
 ) {
   const sound = useMemo(
-    () => new Howl({ src, loop: true, autoplay: true }),
+    () => new Howl({ src, loop: true, preload: true, html5: true }),
     [src]
   );
 
