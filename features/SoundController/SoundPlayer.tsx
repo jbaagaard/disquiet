@@ -15,7 +15,10 @@ export const SoundPlayer = forwardRef(function SoundPlayer(
   { src }: SoundPlayerProps,
   ref
 ) {
-  const sound = useMemo(() => new Howl({ src, loop: true }), [src]);
+  const sound = useMemo(
+    () => new Howl({ src, loop: true, autoplay: true }),
+    [src]
+  );
 
   useImperativeHandle(ref, () => {
     return {
