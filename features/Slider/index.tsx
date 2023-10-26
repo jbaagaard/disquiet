@@ -1,8 +1,9 @@
 import React, { ChangeEvent, useState } from "react";
 import * as S from "./Slider.styled";
+import { Colors } from "../../styles/theme";
 
 interface SliderProps {
-  color: string;
+  color: keyof Colors;
   name: string;
   onChange: (value: number) => void;
   value: number;

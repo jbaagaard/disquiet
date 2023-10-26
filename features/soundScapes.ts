@@ -8,22 +8,22 @@ export const komanokodo: Soundscape = {
     {
       src: "/low-rain.wav",
       name: "deep rain",
-      color: "#233dd7",
+      color: "primary-blue-000",
     },
     {
       src: "/hi-rain.wav",
       name: "high rain",
-      color: "#2b89db",
+      color: "primary-blue-100",
     },
     {
       src: "/running-water.wav",
       name: "running water",
-      color: "#2b89db",
+      color: "primary-blue-200",
     },
     {
       src: "/cicada.wav",
       name: "cicada",
-      color: "#247222",
+      color: "primary-yellow-100",
     },
   ],
   colors: ["#f28246", "#aa46f2"],
@@ -37,23 +37,19 @@ export const testRain2: Soundscape = {
     {
       src: "",
       name: "thunder",
-      color: "#b7a137",
       startVolume: 0,
     },
     {
       src: "",
       name: "rain-bass",
-      color: "#233dd7",
     },
     {
       src: "",
       name: "rain-mids",
-      color: "#2e6fe0",
     },
     {
       src: "",
       name: "rain-trebble",
-      color: "#2b89db",
     },
     {
       src: "",

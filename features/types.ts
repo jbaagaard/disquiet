@@ -1,3 +1,5 @@
+import { Colors } from "../styles/theme";
+
 export interface Soundscape {
   id: string;
   name: string;
@@ -9,7 +11,7 @@ export interface Soundscape {
 export interface Sound {
   src: string;
   name: string;
-  color?: string;
+  color?: keyof Colors;
   startVolume?: number;
 }
 

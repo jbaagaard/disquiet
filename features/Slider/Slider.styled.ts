@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/theme";
 
 export const SliderNoStyle = styled.input<{ orient?: string }>`
   -webkit-appearance: none;
@@ -42,7 +43,7 @@ export const Label = styled.label`
 `;
 
 export const Slider = styled(SliderNoStyle)<{
-  color: string;
+  color: keyof Colors;
   active: boolean;
 }>`
   -webkit-appearance: none;
@@ -52,7 +53,7 @@ export const Slider = styled(SliderNoStyle)<{
   min-width: 200px;
   height: 16px;
   border-radius: 25px;
-  background: #585f88;
+  background: ${(props) => props.theme.colors["base-200"]};
   outline: none;
   opacity: ${(props) => (props.active ? "0.9" : "0.3")};
   -webkit-transition: 0.1s;
@@ -68,7 +69,7 @@ export const Slider = styled(SliderNoStyle)<{
     appearance: none;
     width: 24px;
     height: 24px;
-    background: ${(props) => props.color};
+    background: ${(props) => props.theme.colors[props.color]};
     cursor: pointer;
     border-radius: 29px;
   }

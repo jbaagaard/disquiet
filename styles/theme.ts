@@ -1,17 +1,31 @@
 export interface Colors {
-  bg: string;
-  bgDark: string;
-  bgLight: string;
-  text: string;
-  textHighlight: string;
-  textSubtle: string;
-  textSubtler: string;
-  red: string;
-  redText: string;
-  yellowText: string;
-  yellow: string;
-  greenText: string;
-  green: string;
+  "base-000": string;
+  "base-100": string;
+  "base-200": string;
+  "content-000": string;
+  "content-100": string;
+  "content-200": string;
+  "content-300": string;
+  "primary-red-000": string;
+  "primary-red-100": string;
+  "primary-red-200": string;
+  "primary-red-content-100": string;
+  "primary-pink-000": string;
+  "primary-pink-100": string;
+  "primary-pink-200": string;
+  "primary-pink-content-100": string;
+  "primary-yellow-000": string;
+  "primary-yellow-100": string;
+  "primary-yellow-200": string;
+  "primary-yellow-content-100": string;
+  "primary-green-000": string;
+  "primary-green-100": string;
+  "primary-green-200": string;
+  "primary-green-content-100": string;
+  "primary-blue-000": string;
+  "primary-blue-100": string;
+  "primary-blue-200": string;
+  "primary-blue-content-100": string;
 }
 
 export interface Font {
@@ -34,19 +48,33 @@ export interface BaseTheme {
 
 export const train: BaseTheme = {
   colors: {
-    bg: "#1d2021",
-    bgDark: "#161819",
-    bgLight: "#282828",
-    text: "#d4be98",
-    textHighlight: "#e3ceaa",
-    textSubtle: "#897f73",
-    textSubtler: "#897f73",
-    green: "#a9b665",
-    greenText: "#1d2021",
-    red: "#ea6962",
-    redText: "#d4be98",
-    yellow: "#d8a657",
-    yellowText: "#1d2021",
+    "base-000": "#161819",
+    "base-100": "#1D2021",
+    "base-200": "#282828",
+    "content-000": "#ECD6B1",
+    "content-100": "#D4BE98",
+    "content-200": "#897F73",
+    "content-300": "#7A7064",
+    "primary-red-000": "#B4453F",
+    "primary-red-100": "#EA6962",
+    "primary-red-200": "#FB867F",
+    "primary-red-content-100": "",
+    "primary-pink-000": "#B86179",
+    "primary-pink-100": "#D3869B",
+    "primary-pink-200": "#EEA2B6",
+    "primary-pink-content-100": "",
+    "primary-yellow-000": "#BA883A",
+    "primary-yellow-100": "#D8A657",
+    "primary-yellow-200": "#F2C884",
+    "primary-yellow-content-100": "",
+    "primary-green-000": "#92A33A",
+    "primary-green-100": "#A9B665",
+    "primary-green-200": "#C1CE7A",
+    "primary-green-content-100": "",
+    "primary-blue-000": "#559A8B",
+    "primary-blue-100": "#7DAEA3",
+    "primary-blue-200": "#94CABE",
+    "primary-blue-content-100": "",
   },
   fonts: {
     h1: {

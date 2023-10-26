@@ -7,7 +7,7 @@ export const Button = styled.div<{ playing: boolean }>`
   height: 38px;
   opacity: 0.5;
   border-color: transparent transparent transparent
-    ${(props) => props.theme.colors.text};
+    ${(props) => props.theme.colors["content-100"]};
   transition: 500ms all ease;
   cursor: pointer;
 

@@ -33,7 +33,7 @@ export default function SoundController({ sound }: SoundControllerProps) {
   return (
     <>
       <Slider
-        color={sound.color ? sound.color : "red"}
+        color={sound.color ? sound.color : "primary-blue-100"}
         name={sound.name}
         onChange={(value) => {
           setVolume(value);

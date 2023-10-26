@@ -12,7 +12,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.p`
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors["content-100"]};
   ${(props) => props.theme.fonts.h1}
 `;
 
