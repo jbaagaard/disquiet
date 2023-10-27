@@ -29,6 +29,7 @@ export const Wrapper = styled.div`
 
 export const InfoDiv = styled.div<{ focus: boolean }>`
   transition: opacity 800ms;
+  color: ${(props) => props.theme.colors["content-100"]};
   opacity: ${(props) => (props.focus ? 0.6 : -10)};
   position: absolute;
   top: -32px;

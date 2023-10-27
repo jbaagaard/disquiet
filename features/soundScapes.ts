@@ -6,22 +6,22 @@ export const komanokodo: Soundscape = {
   thumbnail: { src: "japan.png", alt: "Japan" },
   sounds: [
     {
-      src: "/low-rain.wav",
+      src: "/sounds/low-rain.wav",
       name: "deep rain",
       color: "primary-blue-000",
     },
     {
-      src: "/hi-rain.wav",
+      src: "/sounds/hi-rain.wav",
       name: "high rain",
       color: "primary-blue-100",
     },
     {
-      src: "/running-water.wav",
+      src: "/sounds/running-water.wav",
       name: "running water",
       color: "primary-blue-200",
     },
     {
-      src: "/cicada.wav",
+      src: "/sounds/cicada.wav",
       name: "cicada",
       color: "primary-yellow-100",
     },
