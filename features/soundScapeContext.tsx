@@ -9,6 +9,12 @@ export interface soundscapeContextProps {
   soundscapes: Soundscapes;
   currentSoundscape?: Soundscape;
   setCurrentSoundscape?: (value: keyof Soundscapes) => void;
+  animateSliders: boolean;
+  setAnimateSliders: (value: boolean) => void;
+  increaseVolume: () => void;
+  decreaseVolume: () => void;
+  increaseVolumeTrigger: number;
+  decreaseVolumeTrigger: number;
 }
 
 export const soundScapeContext = createContext<soundscapeContextProps>(null!);
@@ -23,6 +29,10 @@ export const SoundScapeProvider = ({ children }: soundScapeProviderProps) => {
   const [currentSoundscape, setCurrentSoundscape] = useState<Soundscape>(
     soundscapes["komanokodo"]
   );
+  const [animateSliders, setAnimateSliders] = useState(false);
+  const [increaseVolumeTrigger, setIncreaseVolumeTrigger] = useState(0);
+  const [decreaseVolumeTrigger, setDecreaseVolumeTrigger] = useState(0);
+
   return (
     <soundScapeContext.Provider
       value={{
@@ -37,6 +47,16 @@ export const SoundScapeProvider = ({ children }: soundScapeProviderProps) => {
         setCurrentSoundscape: (value: keyof Soundscapes) => {
           setCurrentSoundscape(soundscapes[value]);
         },
+        animateSliders,
+        setAnimateSliders,
+        increaseVolume: () => {
+          setIncreaseVolumeTrigger(increaseVolumeTrigger + 1);
+        },
+        decreaseVolume: () => {
+          setDecreaseVolumeTrigger(decreaseVolumeTrigger + 1);
+        },
+        increaseVolumeTrigger,
+        decreaseVolumeTrigger,
       }}
     >
       {children}

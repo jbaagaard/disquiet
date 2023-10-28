@@ -18,5 +18,11 @@ export const Title = styled.p`
 
 export const SoundScapeWrapper = styled.div`
   display: flex;
+  gap: 1.5rem;
+`;
+
+export const ControlsWrapper = styled.div`
+  display: flex;
   gap: 1rem;
+  align-items: center;
 `;
