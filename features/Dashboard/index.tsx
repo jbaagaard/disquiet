@@ -26,13 +26,22 @@ export default function DashBoard() {
         ))}
       </S.SoundScapeWrapper>
       <S.ControlsWrapper>
-        <IconButton icon="volume-down" onClick={decreaseVolume} />
+        <IconButton
+          icon="volume-down"
+          onClick={decreaseVolume}
+          tooltip="Decrease volume"
+        />
         <IconButton
           icon="animate-sliders"
           onClick={() => setAnimateSliders(!animateSliders)}
           value={animateSliders}
+          tooltip="Animate sliders"
         />
-        <IconButton icon="volume-up" onClick={increaseVolume} />
+        <IconButton
+          icon="volume-up"
+          onClick={increaseVolume}
+          tooltip="Increase volume"
+        />
       </S.ControlsWrapper>
       <PlayButton
         isPlaying={isPlaying}

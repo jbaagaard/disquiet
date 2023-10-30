@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import * as S from "./Slider.styled";
 import { Colors } from "../../styles/theme";
+import ToolTip from "../ToolTip";
 
 interface SliderProps {
   color: keyof Colors;
@@ -10,23 +11,23 @@ interface SliderProps {
 }
 
 export const Slider = ({ onChange, color, value, name }: SliderProps) => {
-  const [focus, setFocus] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     onChange(Number(event.currentTarget.value));
   }
 
   function handleFocus() {
-    setFocus(true);
+    setIsFocused(true);
   }
 
   function handleBlur() {
-    setFocus(false);
+    setIsFocused(false);
   }
 
   return (
     <S.Wrapper onMouseOver={handleFocus} onMouseLeave={handleBlur}>
-      <S.InfoDiv focus={focus}>{name}</S.InfoDiv>
+      <ToolTip isFocused={isFocused}>{name}</ToolTip>
       <form>
         <S.Label htmlFor={name}>{name}</S.Label>
         <S.Slider

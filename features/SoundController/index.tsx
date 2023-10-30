@@ -57,12 +57,11 @@ export default function SoundController({ sound }: SoundControllerProps) {
     );
   }
 
-  //if animate sliders in active the sliders should randomly to up and down every minute
   useEffect(() => {
     if (animateSliders) {
       const interval = setInterval(() => {
         randomizeSilder();
-      }, 10000);
+      }, 5000);
       return () => clearInterval(interval);
     }
   }, [animateSliders, volume, animateTrejectory]);

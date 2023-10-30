@@ -8,7 +8,12 @@ export const ButtonNoStyle = styled.button`
 `;
 
 export const Button = styled(ButtonNoStyle)<{ active: boolean }>`
+  position: relative;
   opacity: ${(props) => (props.active ? 0.7 : 0.3)};
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
   transition: all 0.2s ease-in-out;
   &:hover {
     opacity: 0.9;
@@ -19,9 +24,5 @@ export const Button = styled(ButtonNoStyle)<{ active: boolean }>`
 `;
 
 export const iconWrapper = styled.div<{ animateSliders: boolean }>`
-  box-sizing: border-box;
   ${(props) => props.animateSliders && "margin-top: -5px;"}
-  width: 48px;
-  height: 48px;
-  padding: 10px;
 `;
