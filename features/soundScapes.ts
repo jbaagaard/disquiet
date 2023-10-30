@@ -8,7 +8,7 @@ export const komanokodo: Soundscape = {
     {
       src: "/sounds/low-rain.wav",
       name: "deep rain",
-      color: "primary-blue-000",
+      color: "primary-blue-100",
     },
     {
       src: "/sounds/hi-rain.wav",
@@ -18,7 +18,7 @@ export const komanokodo: Soundscape = {
     {
       src: "/sounds/running-water.wav",
       name: "running water",
-      color: "primary-blue-200",
+      color: "primary-green-100",
     },
     {
       src: "/sounds/cicada.wav",
@@ -29,49 +29,10 @@ export const komanokodo: Soundscape = {
   colors: ["#f28246", "#aa46f2"],
 };
 
-export const testRain2: Soundscape = {
-  name: "Forest",
-  id: "forest",
-  thumbnail: { src: "", alt: "forest" },
-  sounds: [
-    {
-      src: "",
-      name: "thunder",
-      startVolume: 0,
-    },
-    {
-      src: "",
-      name: "rain-bass",
-    },
-    {
-      src: "",
-      name: "rain-mids",
-    },
-    {
-      src: "",
-      name: "rain-trebble",
-    },
-    {
-      src: "",
-      name: "forrest-bass",
-    },
-    {
-      src: "",
-      name: "forrest-mids",
-    },
-    {
-      src: "",
-      name: "forrest-trebble",
-    },
-  ],
-  colors: ["#19ba15", "#247222"],
-};
-
 export interface Soundscapes {
   [key: string]: Soundscape;
 }
 
 export const soundscapes: Soundscapes = {
   komanokodo: komanokodo,
-  forest: testRain2,
 };
