@@ -24,7 +24,7 @@ export const Slider = ({ onChange, color, value, name }: SliderProps) => {
   function handleBlur() {
     setIsFocused(false);
   }
-
+  
   return (
     <S.Wrapper onMouseOver={handleFocus} onMouseLeave={handleBlur}>
       <ToolTip isFocused={isFocused}>{name}</ToolTip>

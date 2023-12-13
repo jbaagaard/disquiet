@@ -1,4 +1,4 @@
-import { createContext, use, useContext, useState } from "react";
+import { createContext, use, useContext, useEffect, useState } from "react";
 import { Soundscapes, soundscapes } from "./soundScapes";
 import { Soundscape } from "./types";
 
@@ -7,8 +7,8 @@ export interface soundscapeContextProps {
   isPlaying: boolean;
   setPlaying: (value: boolean) => void;
   soundscapes: Soundscapes;
-  currentSoundscape?: Soundscape;
-  setCurrentSoundscape?: (value: keyof Soundscapes) => void;
+  currentSoundscape: Soundscape;
+  setCurrentSoundscape: (value: keyof Soundscapes) => void;
   animateSliders: boolean;
   setAnimateSliders: (value: boolean) => void;
   increaseVolume: () => void;
@@ -27,7 +27,7 @@ export const SoundScapeProvider = ({ children }: soundScapeProviderProps) => {
   const [playing, setPlaying] = useState(false);
   const [noGestures, setNoGestures] = useState(true);
   const [currentSoundscape, setCurrentSoundscape] = useState<Soundscape>(
-    soundscapes["komanokodo"]
+    soundscapes["kumanokodo"]
   );
   const [animateSliders, setAnimateSliders] = useState(false);
   const [increaseVolumeTrigger, setIncreaseVolumeTrigger] = useState(0);
@@ -45,6 +45,7 @@ export const SoundScapeProvider = ({ children }: soundScapeProviderProps) => {
         soundscapes: soundscapes,
         currentSoundscape: currentSoundscape,
         setCurrentSoundscape: (value: keyof Soundscapes) => {
+          setPlaying(false);
           setCurrentSoundscape(soundscapes[value]);
         },
         animateSliders,

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SVGProps } from "react";
 
-const ChefronLeftIcon = (props: SVGProps<SVGSVGElement>) => (
+const ChevronLeftIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -21,4 +21,4 @@ const ChefronLeftIcon = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
-export default ChefronLeftIcon;
+export default ChevronLeftIcon;

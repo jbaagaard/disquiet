@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import ChefronLeftIcon from "../public/icons/ChefronLeft";
-import ChefronRightIcon from "../public/icons/ChefronRight";
+import ChevronLeftIcon from "../public/icons/ChevronLeft";
+import ChevronRightIcon from "../public/icons/ChevronRight";
 import { Colors } from "../styles/theme";
 import { ThemeContext } from "styled-components";
 import VolumeUpIcon from "../public/icons/VolumeUp";
@@ -8,8 +8,8 @@ import VolumeDownIcon from "../public/icons/VolumeDown";
 import AnimateSlidersIcon from "../public/icons/AnimateSliders";
 
 const icons = {
-  "chefron-left": (color: string) => <ChefronLeftIcon color={color} />,
-  "chefron-right": (color: string) => <ChefronRightIcon color={color} />,
+  "chefron-left": (color: string) => <ChevronLeftIcon color={color} />,
+  "chefron-right": (color: string) => <ChevronRightIcon color={color} />,
   "volume-up": (color: string) => <VolumeUpIcon color={color} />,
   "volume-down": (color: string) => <VolumeDownIcon color={color} />,
   "animate-sliders": (color: string) => <AnimateSlidersIcon color={color} />,

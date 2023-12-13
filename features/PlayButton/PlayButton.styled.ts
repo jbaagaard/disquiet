@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BaseTheme } from "../../styles/theme";
 
 export const Button = styled.div<{ playing: boolean }>`
   background: transparent;
